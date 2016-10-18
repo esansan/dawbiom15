@@ -30,20 +30,9 @@ public class ConversorDeciBinari {
         int binari =0;
         int numero=getNumero();
         System.out.println(numero);
-        for (int i =numero,j=1; i > 1; i/=2,j*=10){
-            System.out.println("i="+i+"j="+j);
+        for (int i =numero,j=1; i != 0; i/=2,j*=10){
             binari+=((i%2)*j);
-            System.out.println(binari);
-        }
-        
-        exp=0;
-        binario=0;
-        while(numero!=0){
-                digito = numero % 2;           
-                binario = binario + digito * Math.pow(10, exp);  
-                exp++;
-                numero = numero/2;
-        }
+        } 
         return binari;
     }
     
